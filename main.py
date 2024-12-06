@@ -7,8 +7,8 @@ import matplotlib.pyplot as plt
 model = YOLO("yolov8n.pt")  # Lightweight YOLOv8 model. Replace with "yolov8x.pt" for higher accuracy.
 
 # Step 2: Load the Image
-image_path = "pic01.png"  # Replace with the path to your PNG image
-output_path = "output_pic01.png"  # Path to save the image with detections
+image_path = "./pic01.png"  # Replace with the path to your PNG image
+output_path = "./output_pic01.png"  # Path to save the image with detections
 
 # Step 3: Run Object Detection
 results = model(image_path)
