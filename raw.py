@@ -4,10 +4,10 @@ from ultralytics import YOLO
 model = YOLO("yolov8n.pt")  # Pretrained YOLOv8 model
 
 # Step 2: Load the Image
-image_path = "pic01.png"  # Replace with your input image
+image_path = "pic01.png"
 
 # Step 3: Run Object Detection
-results = model(image_path)
+results = model(image_path, conf=0.25)
 
 # Step 4: Output Raw Detection Data
 for result in results:  # Iterate through results (one per image)
