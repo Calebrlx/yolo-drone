@@ -7,12 +7,12 @@ from detectron2.data import MetadataCatalog
 
 # Step 1: Load Detectron2 Configuration and Pretrained Model
 cfg = get_cfg()
-cfg.merge_from_file("./configs/faster_rcnn_R_50_FPN_3x.yaml")  # Adjust path to match your system
+cfg.merge_from_file("./configs/faster_rcnn_R_50_FPN_3x.yaml")
 cfg.MODEL.WEIGHTS = (
     "https://dl.fbaipublicfiles.com/detectron2/COCO-Detection/faster_rcnn_R_50_FPN_3x/137849458/model_final_280758.pkl"
 )
-cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5  # Set confidence threshold
-cfg.MODEL.DEVICE = "cpu"  # Force CPU usage since no GPU is available
+cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST = 0.5
+cfg.MODEL.DEVICE = "cpu"
 
 # Step 2: Load the Image
 image_path = "pic01.png"  # Ensure pic01.png is in the same directory
